@@ -4,3 +4,154 @@ body {
     color: white;
 }
 
+:root {
+    --primary-orange: #FF6C2C;
+    --dark-bg: #2c2f31;
+    --darker-bg: #1e1e1e;
+    --card-bg: #2c2c2c;
+    --content-min-height: calc(100vh - 180px);
+}
+
+/* Layout Wrapper Utama */
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--darker-bg);
+    color: #eaeaea;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative; /* Untuk positioning FAB */
+}
+
+/* Konten Utama */
+.main-content-wrapper {
+    flex: 1;
+    padding-bottom: 60px; /* Ruang untuk footer */
+}
+
+/* Header/Navbar */
+.navbar {
+    background-color: var(--dark-bg) !important;
+    border-bottom: 1px solid rgba(255, 108, 44, 0.3);
+    padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-orange) !important;
+}
+
+.dropdown-item:hover {
+    background-color: #FF6C2C !important;
+    color: white !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,108,44,0.5);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255,108,44,0.25);
+}
+
+/* Card Produk */
+.product-card {
+    background-color: var(--card-bg);
+    border: 1px solid #444;
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-orange);
+    transition: all 0.3s;
+}
+
+.card-title {
+    color: var(--primary-orange);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.harga {
+    color: #34a4ff;
+    font-weight: bold;
+}
+
+/* Search Box */
+.search-box {
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 30px;
+    padding: 8px 15px;
+}
+
+.search-box:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 0.25rem rgba(255, 108, 44, 0.25);
+}
+
+/* Footer */
+.main-footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 1.5rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+/* Floating Action Button */
+.fab-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.fab-main {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--primary-orange);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(255, 108, 44, 0.3);
+    transition: all 0.3s;
+}
+
+.fab-main:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+    
+    .product-card {
+        margin-bottom: 15px;
+    }
+    
+    .fab-container {
+        bottom: 70px;
+        right: 20px;
+    }
+}

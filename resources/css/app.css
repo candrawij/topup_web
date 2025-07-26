@@ -1,0 +1,80 @@
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.badge.bg-success {
+    background-color: #198754;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Adjust card sizes */
+.order-card {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.product-image {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* Payment method styling */
+.payment-method {
+    max-width: 80px;
+    height: auto;
+}
+
+.payment-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.payment-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Variant selection styling */
+.variant-option {
+    margin-bottom: 10px;
+}
+
+.variant-option label {
+    display: block;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.variant-option input[type="radio"]:checked + label {
+    border-color: #0d6efd;
+    background-color: #e7f1ff;
+}
+
+/* Footer positioning */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.main-content {
+    margin-bottom: 100px; /* Adjust based on footer height */
+}

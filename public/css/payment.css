@@ -1,0 +1,83 @@
+/* Payment Drawer Styles */
+.payment-container {
+    margin-bottom: 1.5rem;
+}
+
+.payment-drawer {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+    border: 1px solid #e0e0e0;
+}
+
+.payment-header {
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: background-color 0.2s;
+    padding: 1rem;
+}
+
+.payment-header:hover {
+    background-color: #e9ecef;
+}
+
+.payment-title {
+    font-size: 1.1rem;
+}
+
+.payment-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.payment-drawer.active .payment-content {
+    max-height: 500px; /* Sesuaikan dengan kebutuhan */
+}
+
+.payment-options {
+    padding: 0;
+}
+
+.payment-option {
+    transition: background-color 0.2s;
+    border-top: 1px solid #eee;
+}
+
+.payment-option:hover {
+    background-color: #f8f9fa;
+}
+
+.payment-item {
+    cursor: pointer;
+}
+
+.payment-info {
+    padding: 0.75rem;
+}
+
+.payment-icon img {
+    max-width: 40px;
+    height: auto;
+}
+
+.payment-name {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.payment-description {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* Transisi untuk ikon */
+.transition-all {
+    transition: transform 0.3s ease;
+}
+
+.payment-drawer.active .fa-chevron-up {
+    transform: rotate(180deg);
+}

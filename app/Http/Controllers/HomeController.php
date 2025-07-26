@@ -9,10 +9,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Ambil 12 produk terbaru dari database
-        $products = Product::latest()->take(12)->get();
-
-        // Kirim ke view 'home'
+        // Ambil semua produk dari database urut bedasarkan nama
+        $products = Product::orderBy('name', 'ASC')->get(); // Urutkan A-Z
         return view('home', compact('products'));
     }
 }

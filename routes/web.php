@@ -14,6 +14,9 @@ Route::get('/', function () {
     return view('home', compact('products'));
 })->name('home');
 
+Route::get('/order/{product_slug}', [ProductController::class, 'showOrderPage'])->name('order.show');
+Route::post('/order/process', [OrderController::class, 'process'])->name('order.process');
+
 Route::view('/history', 'history')->name('history');
 
 Route::get('/dashboard', function () {
@@ -25,11 +28,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-    // Transaction
-    Route::get('/topup', [TransactionController::class, 'create'])->name('transaction.create');
-    Route::post('/topup', [TransactionController::class, 'store'])->name('transaction.store');
-    Route::get('/invoice/{id}', [InvoiceController::class, 'show'])->name('invoice.show');
 });
 
 Route::get('/pricelist', [ProductController::class, 'index'])->name('pricelist');

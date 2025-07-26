@@ -2,19 +2,19 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Product;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
-class ProductSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     public function run()
     {
         User::firstOrCreate([
-            'email' => 'test@example.com',
+            'email' => 'groversary@gmail.com',
         ], [
-            'name' => 'Test User',
-            'password' => bcrypt('password'),
+            'name' => 'candra',
+            'password' => bcrypt('12345678'),
             'email_verified_at' => now(),
         ]);
     }
