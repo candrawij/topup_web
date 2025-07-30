@@ -5,6 +5,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 
@@ -15,7 +16,12 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/order/{product_slug}', [ProductController::class, 'showOrderPage'])->name('order.show');
-Route::post('/order/process', [OrderController::class, 'process'])->name('order.process');
+// Route untuk checkout
+Route::post('/order/process', [OrderController::class, 'store'])->name('order.process');
+
+// Route untuk handle notifikasi Midtrans
+Route::post('/payment/notification', [OrderController::class, 'handleNotification']);
+
 
 Route::view('/history', 'history')->name('history');
 

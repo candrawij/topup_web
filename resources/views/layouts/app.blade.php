@@ -14,7 +14,6 @@
     {{-- Custom Styles --}}
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/payment.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/payment.css') }}" rel="stylesheet">
 </head>
 <body data-topbar="dark" data-layout="horizontal" data-layout-size="full">
     <div class="app-wrapper">
@@ -26,6 +25,7 @@
             <div class="container py-4">
                 @yield('content')
             </div>
+        </div>
         </div>
 
         {{-- Footer --}}

@@ -1,83 +1,80 @@
-/* Payment Drawer Styles */
-.payment-container {
-    margin-bottom: 1.5rem;
-}
-
-.payment-drawer {
-    border-radius: 8px;
+/* resources/css/payment-methods.css */
+.payment-drawwer {
+    margin-bottom: 15px;
+    border-radius: 5px;
     overflow: hidden;
-    background-color: #fff;
-    transition: all 0.3s ease;
-    margin-bottom: 0.5rem;
-    border: 1px solid #e0e0e0;
+    background: #f8f9fa;
+    border: 1px solid #1e1e1e;
 }
 
-.payment-header {
+.payment-drawwer .header {
+    padding: 12px 15px;
     cursor: pointer;
-    background-color: #f8f9fa;
-    transition: background-color 0.2s;
-    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: #2c2c2c;
+    border-radius: 8px 8px 0 0; /* Tambahkan border radius */
+    margin-bottom: 0;
 }
 
-.payment-header:hover {
-    background-color: #e9ecef;
+.payment-drawwer .header .left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.payment-title {
-    font-size: 1.1rem;
+.payment-drawwer .header .left i {
+    font-size: 1rem; /* Ukuran ikon */
 }
 
-.payment-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
-
-.payment-drawer.active .payment-content {
-    max-height: 500px; /* Sesuaikan dengan kebutuhan */
-}
-
-.payment-options {
-    padding: 0;
-}
-
-.payment-option {
-    transition: background-color 0.2s;
-    border-top: 1px solid #eee;
-}
-
-.payment-option:hover {
-    background-color: #f8f9fa;
+.payment-drawwer .button-action-payment {
+    background: white;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .payment-item {
+    display: block;
+    padding: 10px 15px;
     cursor: pointer;
+    transition: background 0.2s;
+    font-size: 0.95rem;
 }
 
-.payment-info {
-    padding: 0.75rem;
+.payment-item:hover, 
+.payment-item.active {
+    background-color: #f1f8ff;
 }
 
-.payment-icon img {
-    max-width: 40px;
-    height: auto;
+.payment-item .info-top {
+    display: flex;
+    align-items: center;
 }
 
-.payment-name {
-    font-weight: 600;
-    margin-bottom: 0.2rem;
+.payment-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
 }
 
-.payment-description {
-    color: #6c757d;
-    font-size: 0.85rem;
+.short-payment-support-info {
+    padding: 10px;
+    text-align: center;
+    background: #f1f1f1;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
 }
 
-/* Transisi untuk ikon */
-.transition-all {
-    transition: transform 0.3s ease;
+.short-payment-support-info img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    vertical-align: middle;
 }
 
-.payment-drawer.active .fa-chevron-up {
-    transform: rotate(180deg);
+.payment-item .info-bottom {
+    color: #1e293b; /* Warna teks lebih gelap */
+    margin-top: 4px;
+    font-size: 0.9rem;
 }

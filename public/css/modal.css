@@ -1,0 +1,14 @@
+/* Tambahkan di CSS Anda */
+.modal-dark .modal-content {
+    background-color: #343a40;
+    color: white;
+}
+
+.modal-dark .modal-header,
+.modal-dark .modal-footer {
+    border-color: #495057;
+}
+
+.modal-dark .btn-close {
+    filter: invert(1);
+}
